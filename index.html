@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte App Nossa Gente</title>
+    <link rel="shortcut icon" href="assets/app.webp" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Sistema de Suporte - Atendimento ao Cliente</h1>
+    <div class="container">
+        <button class="btn" onclick="mostrarResposta('erro415')">Erro 415</button>
+        <button class="btn" onclick="mostrarResposta('erro414')">Erro 414</button>
+        <button class="btn" onclick="mostrarResposta('rgDesatualizado')">RG Desatualizado</button>
+        <button class="btn" onclick="mostrarResposta('contestacaoSaldo')">Contestações de Saldo</button>
+        <button class="btn" onclick="mostrarResposta('rgSelfie')">RG e Selfie</button>
+        <button class="btn" onclick="mostrarResposta('rgFrontalVerso')">RG (Frontal e Verso)</button>
+        <button class="btn" onclick="mostrarResposta('selfieCracha')">Selfie com Crachá</button>
+    </div>
+
+    <div id="resposta" class="response"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

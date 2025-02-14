@@ -1,0 +1,134 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: url("assets/equipe2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-attachment: scroll; /* /* Remove o efeito fixo para dispositivos móveis */
+    
+    padding-top: 50px; /* Adiciona espaço no topo da página */
+}
+
+h1 {
+    text-align: center;
+    color: #0c22e4;
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo apareça sobre a imagem de fundo */
+    padding: 30px;
+}
+
+.container {
+    display: flex; /* Ativa o layout flexbox */
+    justify-content: space-between; /* Espaça os botões igualmente */
+    gap: 10px; /* Adiciona espaçamento entre os botões */
+    margin-top: 250px; /* Mover os botões para baixo da página */
+}
+
+.btn {
+   
+    display: block;
+    margin: 10px 0;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    text-align: left;
+    border-radius: 5px;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+
+.btn:hover {
+    background-color: #45a049; /* Cor do botão no hover */
+    transform: scale(1.1); /* Aumenta o botão ligeiramente */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombras mais fortes */
+    transition: all 0.3s ease; /* Transição suave para o hover */
+}
+
+.btn:active {
+    transform: scale(0.95); /* Efeito de "pressionar" o botão */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras sutis novamente */
+}
+.response {
+    /* width: 100%; */
+    height: 50px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Inicialmente escondido */
+    position: relative;
+    left: -100%; /* Coloca a div à esquerda da tela */
+    transition: all 1s ease-in-out; /* Transição suave */
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    body {
+        background-attachment: scroll; /* Garante que a imagem se mova corretamente em telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-position: center center; /* Garante que a imagem esteja sempre centralizada */
+    }
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column; /* Alinha os botões verticalmente em telas menores */
+        margin-top: 100px; /* Ajusta o espaçamento para telas menores */
+    }
+
+    .btn {
+        width: 100%; /* Faz os botões ocuparem 100% da largura */
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 20px; /* Diminui o espaço superior em telas menores */
+    }
+
+    h1 {
+        font-size: 24px; /* Ajusta o tamanho da fonte do título */
+        padding: 20px;
+    }
+
+    .container {
+        margin-top: 80px; /* Ajusta o espaçamento para telas muito pequenas */
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px; /* Reduz o tamanho do título em telas muito pequenas */
+        padding: 15px;
+    }
+
+    .container {
+        margin-top: 50px; /* Ajusta o espaçamento para telas muito pequenas */
+    }
+
+    .btn {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .response {
+        font-size: 16px; /* Ajusta o tamanho da fonte da resposta */
+    }
+}
